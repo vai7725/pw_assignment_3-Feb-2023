@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Red+Rose&display=swap");
+/* =========
+    Global styles
+    ========= */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Rose", cursive;
+  list-style: none;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* =========
+    Body BG
+    ========= */
+
+body::before {
+  height: 100vh;
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../assets/bg.jpg") no-repeat center/cover;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+/* =========
+    Button style
+    ========= */
+
+.btn-sm,
+.btn-lg {
+  background-color: #ff515f;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  transition: all 100ms linear;
+  font-weight: bold;
+}
+.btn-sm:hover,
+.btn-lg:hover {
+  background: none;
+  border: 2px solid #ffc233;
+}
+
+.btn-sm {
+  padding: 0.5rem 2rem;
+  display: none;
+}
+.btn-lg {
+  padding: 0.8rem 2rem;
+}
+
+/* =========
+    Navbar styles
+    ========= */
+
+.navbar,
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  padding: 1.5rem 0.5rem;
+  height: 15vh;
+}
+
+.logo {
+  min-width: 100px;
+  width: 10%;
+}
+
+.nav-links {
+  display: none;
+  width: 30%;
+  min-width: fit-content;
+  font-weight: bold;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #ffc233;
+  font-weight: bold;
+}
+
+.ham {
+  padding: 0.3rem;
+  display: block;
+}
+
+.ham-bar {
+  background-color: #fff;
+  height: 5px;
+  width: 30px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* =========
+    Main page styles
+    ========= */
+
+.landing-section {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-section-title {
+  min-width: 350px;
+  font-family: "Dela Gothic One", cursive;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 80%;
+  color: #ffc233;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+/* =========
+    Footer styles
+    ========= */
+
+.footer {
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+}
+
+.footer-img {
+  height: 100%;
+}
+
+/* =========
+    Responsive properties
+    ========= */
+
+@media screen and (min-width: 640px) {
+  .navbar {
+    padding: 1.5rem;
+  }
+  .nav-links {
+    display: flex;
+  }
+  .btn-sm {
+    display: inline;
+  }
+  .landing-section-title {
+    font-size: 3rem;
+  }
+  .ham {
+    display: none;
+  }
+}
